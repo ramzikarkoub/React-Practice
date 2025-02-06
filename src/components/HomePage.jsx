@@ -1,7 +1,7 @@
 import SearchBar from "./SearchBar";
 import Header from "./Header";
 
-function HomePage({ handleClick, employee }) {
+function HomePage({ setSelectedEmployee, employee }) {
   return (
     <div className="homepage">
       <Header />
@@ -11,7 +11,7 @@ function HomePage({ handleClick, employee }) {
           <div
             className="employeeListItem"
             key={employee.name}
-            onClick={() => handleClick(employee)}
+            onClick={() => setSelectedEmployee(employee)}
           >
             <img src={employee.imgSrc} id="profilePic" />
             <div className="employeeInfo">

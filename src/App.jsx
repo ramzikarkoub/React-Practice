@@ -8,14 +8,14 @@ export default function App() {
   const [employee, setEmployee] = useState(employees);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
 
-  function handleClick(employees) {
-    console.log(employees);
-    setSelectedEmployee(employees);
-  }
+  // function handleClick(employees) {
+  //   console.log(employees);
+  //   setSelectedEmployee(employees);
+  // }
   console.log(setSelectedEmployee);
   return (
     <div className="App">
-      <HomePage employee={employee} handleClick={handleClick} />
+      <HomePage employee={employee} setSelectedEmployee={setSelectedEmployee} />
       <EmployeePage selectedEmployee={selectedEmployee} />
     </div>
   );
